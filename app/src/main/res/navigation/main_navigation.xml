@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_screen_navigation"
+>
+<!--    app:startDestination="@id/homeScreenFragment"-->
+<!--    <fragment-->
+<!--        android:id="@+id/homeScreenFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.HomeFragment"-->
+<!--        android:label="homeScreenFragment">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_homeScreenFragment_to_MusicPlayScreenFragment"-->
+<!--            app:destination="@id/MusicPlayScreenFragment"-->
+<!--            app:enterAnim="@anim/from_right"-->
+<!--            app:exitAnim="@anim/to_left"-->
+<!--            app:popEnterAnim="@anim/from_left"-->
+<!--            app:popExitAnim="@anim/to_right" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_homeScreenFragment_to_SearchFragment"-->
+<!--            app:destination="@id/SearchFragment"-->
+<!--            app:enterAnim="@anim/from_right"-->
+<!--            app:exitAnim="@anim/to_left"-->
+<!--            app:popEnterAnim="@anim/from_left"-->
+<!--            app:popExitAnim="@anim/to_right" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_homeScreenFragment_to_LinkListScreenFragment"-->
+<!--            app:destination="@id/linkListScreenFragment"-->
+<!--            app:enterAnim="@anim/from_right"-->
+<!--            app:exitAnim="@anim/to_left"-->
+<!--            app:popEnterAnim="@anim/from_left"-->
+<!--            app:popExitAnim="@anim/to_right" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_questionsOneFragment_to_rightFragment"-->
+<!--            app:destination="@id/RightSideFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_homeScreenFragment_to_SettingFragment"-->
+<!--            app:destination="@id/settingFragment"-->
+<!--            app:enterAnim="@anim/from_right"-->
+<!--            app:exitAnim="@anim/to_left"-->
+<!--            app:popEnterAnim="@anim/from_left"-->
+<!--            app:popExitAnim="@anim/to_right" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_homeScreenFragment_to_HighLightSelectionFragment"-->
+<!--            app:destination="@id/highLightSelectionFragment" />-->
+<!--        <action-->
+<!--            android:id="@+id/action_homeScreenFragment_to_rightFragment"-->
+<!--            app:destination="@id/RightSideFragment"-->
+<!--            app:enterAnim="@anim/from_right"-->
+<!--            app:exitAnim="@anim/to_left"-->
+<!--            app:popEnterAnim="@anim/from_left"-->
+<!--            app:popExitAnim="@anim/to_right" />-->
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/MusicPlayScreenFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.MusicPlayFragment"-->
+<!--        android:label="musicPlayFragment">-->
+
+<!--    </fragment>-->
+<!--    <dialog-->
+<!--        android:id="@+id/CommonsBottomSheetFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.commons.CommonsBottomSheetFragment"-->
+<!--        android:label="CommonsBottomSheetFragment">-->
+
+<!--    </dialog>-->
+<!--    <dialog-->
+<!--        android:id="@+id/CommonFollowBottomSheetFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.commons.CommonFollowBottomSheetFragment"-->
+<!--        android:label="CommonFollowBottomSheetFragment">-->
+
+<!--    </dialog>-->
+<!--    <dialog-->
+<!--        android:id="@+id/EmotionalLearningBottomSheetFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.story.EditLearningBottomSheetFragment"-->
+<!--        android:label="EmotionalLearningBottomSheetFragment">-->
+
+<!--    </dialog>-->
+<!--    <fragment-->
+<!--        android:id="@+id/RightSideFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.RightSideFragment"-->
+<!--        android:label="RightSideFragment">-->
+
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/linkListScreenFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.story.LinkListScreenFragment"-->
+<!--        android:label="LinkListScreenFragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_linkListScreenFragment_to_addLearningFragment"-->
+<!--            app:destination="@id/addLearningFragment"-->
+<!--            app:enterAnim="@anim/from_right"-->
+<!--            app:exitAnim="@anim/to_left"-->
+<!--            app:popEnterAnim="@anim/from_left"-->
+<!--            app:popExitAnim="@anim/to_right" />-->
+
+
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/addLearningFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.story.AddLearningFragment"-->
+<!--        android:label="addLearningFragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_addLearningFragment_to_MusicInformationFragment"-->
+<!--            app:destination="@id/musicInformationFragment"-->
+<!--            app:enterAnim="@anim/from_right"-->
+<!--            app:exitAnim="@anim/to_left"-->
+<!--            app:popEnterAnim="@anim/from_left"-->
+<!--            app:popExitAnim="@anim/to_right" />-->
+
+<!--    </fragment>-->
+<!--  <fragment-->
+<!--        android:id="@+id/musicInformationFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.story.MusicInformationFragment"-->
+<!--        android:label="musicInformationFragment">-->
+
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/SearchFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.SearchFragment"-->
+<!--        android:label="SearchFragment">-->
+
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/settingFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.mypage.SettingFragment"-->
+<!--        android:label="SearchFragment">-->
+
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/highLightSelectionFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.mypage.HighLightSelectionFragment"-->
+<!--        android:label="SearchFragment">-->
+
+<!--    </fragment>-->
+<!--    <fragment-->
+<!--        android:id="@+id/landingScreenFragment"-->
+<!--        android:name="com.bd.jayson.ui.main.view.LandingScreenFragment"-->
+<!--        android:label="LandingScreenFragment">-->
+<!--        <action-->
+<!--            android:id="@+id/action_landingScreenFragment_to_SearchFragment"-->
+<!--            app:destination="@id/SearchFragment" />-->
+<!--    </fragment>-->
+<!--    <dialog-->
+<!--        android:id="@+id/EmotionalMemoBottomSheetFragment"-->
+<!--        android:name="com.bd.jayson.ui.auth.create.EmotionalMemoBottomSheetFragment"-->
+<!--        android:label="EmotionalMemoBottomSheetFragment"></dialog>-->
+</navigation>

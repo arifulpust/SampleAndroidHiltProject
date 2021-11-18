@@ -1,0 +1,163 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'androidx.navigation.safeargs'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.bd.jayson"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
+    signingConfigs {
+        dev {
+            keyAlias 'jayson'
+            keyPassword 'jayson'
+            storeFile file('jayson')
+            storePassword 'jayson'
+        }
+        }
+    buildTypes {
+        buildTypes {
+            debug {
+                minifyEnabled false
+                buildConfigField('String', 'BASE_DOMAIN_URL', '"https://api.co.jp.systems/"')
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                buildConfigField('boolean', 'IS_LOG', "true")
+                // signingConfig signingConfigs.dev
+                debuggable true
+            }
+
+    }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE'
+        pickFirst 'META-INF/io.netty.versions.properties'
+        pickFirst 'META-INF/INDEX.LIST'
+        exclude("META-INF/*.kotlin_module")
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    flavorDimensions "appId"
+    productFlavors {
+        dev {
+            applicationId = 'com.bd.jayson.debug'
+            minSdkVersion 21
+            targetSdkVersion 31
+            dimension "appId"
+            resValue "string", "app_name", "Jayson Dev"
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation("com.android.support:multidex:1.0.3")
+
+    // Manages the Locale used by the app
+   // implementation 'dev.b3nedikt.applocale:applocale:2.0.3'
+
+
+  //  implementation 'dev.b3nedikt.viewpump:viewpump:4.0.5'
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC3'
+    //Permission extension
+    implementation 'com.github.florent37:runtime-permission-kotlin:1.1.2'
+// Allows to update the text of views at runtime
+   // implementation 'dev.b3nedikt.reword:reword:4.0.0'
+    // swipe back
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+
+   // implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // Added Dependencies
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+   // implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'androidx.activity:activity-ktx:1.4.0'
+    //GIF imageview
+    def nav_version = '2.3.5'
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    // Stetho
+    def stethoVersion = "1.6.0"
+    implementation "com.facebook.stetho:stetho:${stethoVersion}"
+    implementation "com.facebook.stetho:stetho-okhttp3:${stethoVersion}"
+
+    //Dagger
+    implementation 'com.google.dagger:hilt-android:2.38.1'
+    kapt 'com.google.dagger:hilt-android-compiler:2.38.1'
+    implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+   // implementation 'commons-validator:commons-validator:1.6'
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp-dnsoverhttps:4.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    // Crop Image
+   // implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+//    implementation 'com.xfinity:dahdit:0.9.3'
+
+    //Coil image Lib
+    implementation 'io.coil-kt:coil:1.3.2'
+    implementation 'jp.wasabeef.transformers:coil:1.0.3'
+    implementation 'jp.wasabeef.transformers:core:1.0.3'
+    // Paging
+    implementation 'androidx.paging:paging-runtime-ktx:3.0.1'
+    // Networking
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+//    implementation 'com.mahc.custombottomsheetbehavior:googlemaps-like:0.9.1'
+//    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1"
+    // compile 'com.github.vihtarb:tooltip:1.0.0-alpha05-SNAPSHOT'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    //implementation 'com.jakewharton.timber:timber:4.7.1'
+   // implementation  'pub.devrel:easypermissions:3.0.0'
+//    implementation 'com.google.android:flexbox:1.0.0'
+}
